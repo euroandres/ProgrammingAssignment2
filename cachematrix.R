@@ -1,7 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## As per the assignment description, the function is written to store the inverse of different matrix in order to avoid
+## recalculation when necessary to re use the value.
 
-## Write a short comment describing this function
+## The first function sets a list, by scoping a list of functions to the assigned value (Matrix to be "inversed")
 
 makeCacheMatrix <- function(x = matrix()) {
     i <- NULL
@@ -18,7 +18,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This functions checks that the specified Matrix hasn't been inversed before, if so, looks up the cached value,
+## otherwise calculated the inverse of the matrix
 
 cacheSolve <- function(x, ...) {
     i <- x$getinv()
@@ -30,5 +31,4 @@ cacheSolve <- function(x, ...) {
     i <- solve(data, ...)
     x$setinv(i)
     i
-    ## Return a matrix that is the inverse of 'x'
 }
